@@ -1,4 +1,5 @@
 ﻿// Before
+#pragma warning disable IDE0350 // Use implicitly typed lambda
 TryParseCsv tryParseCsv = (string input, out List<int> result) => {
     result = [];
     foreach(var column in input.Split(',')) {
@@ -11,6 +12,7 @@ TryParseCsv tryParseCsv = (string input, out List<int> result) => {
     result.Clear();
     return false;
 };
+#pragma warning restore IDE0350 // Use implicitly typed lambda
 
 // New (note: you can leave out types for the parameters)
 TryParseCsv tryParseCsvNew = (input, out result) => {

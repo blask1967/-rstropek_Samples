@@ -13,7 +13,7 @@ The `field` keyword is a **contextual keyword** introduced in C# 14 that allows 
 - **Mixed Accessor Patterns**: You can combine auto-implemented accessors (`get;`) with custom logic accessors (`set => field = value`)
 - **Type Inference**: The backing field has the same type as the property
 
-## Four Essential Use Cases
+## Demo: Four Essential Use Cases
 
 The following sections explore four fundamental patterns demonstrated in this project's sample code.
 
