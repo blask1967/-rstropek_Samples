@@ -1,7 +1,7 @@
 ﻿//using StringExtensionsTraditional;
 //using StringExtensions;
 using MultipleStringExtensions;
-using ExtensionProperties;
+using ExtensionEverything;
 using StaticExtensions;
 using TaskExtensions;
 
@@ -9,6 +9,10 @@ using TaskExtensions;
 string email = "user@example.com";
 if (!email.IsValidEmail()) { Console.WriteLine("Invalid email"); }
 if (!email.IsEmail) { Console.WriteLine("Invalid email"); }
+
+string numberAsString = "12345";
+numberAsString += "67";
+Console.WriteLine(numberAsString);
 
 string longText = "This is a very long text that needs truncation";
 string truncated = longText.TruncateWithSuffix(20); // "This is a very lo..."

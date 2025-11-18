@@ -57,7 +57,7 @@ namespace MultipleStringExtensions
     }
 }
 
-namespace ExtensionProperties
+namespace ExtensionEverything
 {
     using MultipleStringExtensions;
 
@@ -65,7 +65,25 @@ namespace ExtensionProperties
     {
         extension(string emailAddress)
         {
+            // Extension property
             public bool IsEmail => emailAddress.IsValidEmail();
+        }
+
+        extension(string someNumberAsString)
+        {
+            // Extension operator
+            // (Note: Compound assignment operators, also new in C# 14)
+            public void operator +=(string v)
+            {
+                if (int.TryParse(someNumberAsString, out var left) && int.TryParse(v, out var right))
+                {
+                    someNumberAsString = (left + right).ToString();
+                }
+                else
+                {
+                    throw new InvalidOperationException("Both operands must be valid integers in string format.");
+                }
+            }
         }
     }
 }

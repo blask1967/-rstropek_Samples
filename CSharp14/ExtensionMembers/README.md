@@ -152,7 +152,7 @@ Understanding the lowered form helps with:
 ### When to Use Extension Members
 
 - **New projects**: Start with extension member syntax for cleaner organization
-- **Extension properties**: Always use the new syntax when you need property-like access
+- **Extension everything**: Always use the new syntax when you need property-like access or extension operators
 - **Static extensions**: Use for factory methods and type-related utilities
 - **Complex generic scenarios**: Leverage extension-level generics for cleaner code
 
